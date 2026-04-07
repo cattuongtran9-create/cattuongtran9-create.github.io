@@ -156,7 +156,7 @@ const Projects = () => {
                     <Link
                       key={j}
                       to={`/project/${encodeURIComponent(name)}`}
-                      className="px-3 py-1 rounded-full bg-accent text-muted-foreground text-xs font-medium hover:bg-foreground hover:text-background transition-colors"
+                      className="px-3 py-1 rounded-full bg-accent text-white text-xs font-medium hover:bg-foreground hover:text-background transition-colors"
                     >
                       {name}
                     </Link>
