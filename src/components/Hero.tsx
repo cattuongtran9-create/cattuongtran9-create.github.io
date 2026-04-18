@@ -101,8 +101,7 @@ const Hero = () => {
       </motion.svg>
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-        {/* Left: Text */}
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex-1 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,71 +110,7 @@ const Hero = () => {
           >
             Welcome to <span className="bg-[hsl(348,89%,53%)] px-1.5 py-0.5 leading-none inline-block">Cat Tuong's</span> portfolio
           </motion.h1>
-        </div>
-
-        {/* Right: Shopping cart with CV */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex-1 w-full max-w-md"
-        >
-          <div className="relative">
-            {/* Cart container */}
-            <div className="relative bg-card border-2 border-border rounded-3xl p-6 shadow-lg">
-              {/* Cart header */}
-              <div className="flex items-center gap-3 mb-4 pb-4 border-b border-border">
-                <ShoppingCart className="w-5 h-5 text-foreground" />
-                <span className="font-heading font-bold text-foreground text-sm">Your Cart</span>
-                <span className="ml-auto bg-primary text-primary-foreground text-xs font-bold px-2.5 py-0.5 rounded-full">
-                  2 items
-                </span>
-              </div>
-
-              {/* Cart items */}
-              <div className="space-y-4">
-                <a href="#about" className="flex gap-4 items-start group cursor-pointer hover:bg-accent/50 -mx-2 px-2 py-2 rounded-xl transition-colors">
-                  <div className="w-20 h-20 rounded-xl overflow-hidden bg-accent flex-shrink-0 border border-border">
-                    <img
-                      src={folderIcon}
-                      alt="CV & Portfolio"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-heading font-semibold text-foreground text-sm group-hover:underline">About me</h4>
-                    <p className="text-muted-foreground text-xs mt-0.5">Trần Thị Cát Tường</p>
-                    <p className="text-foreground font-heading font-bold text-sm mt-2">Priceless ✦</p>
-                  </div>
-                </a>
-
-                <a href="#projects" className="flex gap-4 items-start group cursor-pointer hover:bg-accent/50 -mx-2 px-2 py-2 rounded-xl transition-colors">
-                  <div className="w-20 h-20 rounded-xl overflow-hidden bg-accent flex-shrink-0 border border-border">
-                    <img
-                      src={folderIcon}
-                      alt="Projects"
-                      className="w-full h-full object-cover object-bottom"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-heading font-semibold text-foreground text-sm group-hover:underline">My projects</h4>
-                    <p className="text-muted-foreground text-xs mt-0.5">Projects & Work Showcase</p>
-                    <p className="text-foreground font-heading font-bold text-sm mt-2">Priceless ✦</p>
-                  </div>
-                </a>
-              </div>
-
-              {/* Cart footer - just total, no button */}
-              <div className="mt-6 pt-4 border-t border-border">
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground text-sm">Total Value</span>
-                  <span className="font-heading font-bold text-foreground">Unlimited Potential</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </motion.div>
+        </div>        
       </div>
 
       <motion.div
