@@ -128,7 +128,7 @@ const Projects = () => {
             Featured Projects
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Impact in action.
+            Projects
           </h2>
         </motion.div>
 

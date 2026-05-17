@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
@@ -6,49 +7,50 @@ const experiences = [
     title: "Marketing Intern",
     org: "Apollo English",
     description: [
-      "Assisted in planning and managing events, especially educational events for children aged 8-12.",
-      "Prepared materials and logistics for events, and actively participated in weekly team meetings with the Event Marketing Cluster Manager.",
-      'Managed the weekly "Golden Bell Challenge" event with 10-15 participants, children aged 6-12.',
-      "Hosted events at kindergartens and primary schools.",
-      "Collaborator at the cluster-scope events with 500 - 600 participants.",
-    ],
-  },
-  {
-    period: "January 2025 — Present",
-    title: "Social Media Freelancer",
-    org: "Client: Bà Năm restaurant, Olive House",
-    description: [
-      "Editing the social videos for TikTok accounts of clients.",
-      "Crafting a detailed video brief, structure the script and flow.",
+      "Operated activation booths at schools and events with up to 200 - 300 participants, engaging parents to promote free trial classes.",
+      "Consulted parents of children aged 6-12 to identify learning needs, collect leads, and support trial-class registration.",
+      "Generated around 200 leads per month, with around 5% of leads converting to sales.",
+      "Coordinated with Event Marketing and Sales teams to support the offline acquisition funnel from parent engagement to potential customer conversion.",
     ],
   },
 ];
 
 const activities = [
   {
-    period: "March 2024 — April 2024",
-    title: "External Relations Leader (Seminar project)",
-    org: "ISB Academic Team",
+    period: "October 2025 — December 2025",
+    title: "SHIRTALK - Management Team",
+    org: "Instagram",
+    link: "https://www.instagram.com/shirtalk_wearyourvoice/",
     description: [
-      'Soft skills workshop: "From Campus to Career: Conquer your first job interview".',
-      "A live seminar attended by over 350 students.",
-      "Co-organizer Partner: Talemy.",
-      "Guest speakers: Mr. Trần Phước Trí and Mr. Nguyễn Trung Hiếu.",
-      "Negotiated sponsorship proposals and ensured mutual benefits and responsibilities with the Co-organizer Partner.",
-      "Main contact for content orientation with guest speakers and the Content team.",
-      "Managed, tracked, and led the External Relations team of 7 members.",
+      "Managed SHIRTALK's Instagram content strategy, including lifestyle posts, styling visuals, communication posts, Stories, Reels, and UGC campaigns.",
+      "Achieved 52,133 total views, 1,284 accounts reached, 1,509 profile visits, and 748 total engagements with an estimated 1.4% engagement rate.",
+      "Analyzed audience behavior and content performance, identifying that 51.9% of views came from non-followers, while 85.4% of engagements came from followers.",
+      "Proposed next-step improvements based on performance data, including higher-quality visuals, styling-focused Reels, stronger CTAs, and simplified UGC mechanics to improve interaction and conversion.",
     ],
   },
   {
-    period: "May 2021 — September 2022",
-    title: "Co-Founder",
-    org: "Ngot Lab project",
+    period: "October 2025 — December 2025",
+    title: "SHIRTALK - Management Team",
+    org: "Website",
+    link: "https://shirtalk.vercel.app/",
     description: [
-      "Developed strategic plans and managed human resources for communication tasks during bakery sales campaigns.",
-      "Successfully raised 5 million VND through fundraising activities during the COVID-19 pandemic (academic year: 2021–2022).",
-      "Achieved 1,500 page likes within the first 6 months; currently reached 4,400 likes.",
-      "Produced engaging content series about baking, tailored for students.",
-      "Managed, tracked, and led the Communication and Human Resource team of 19 members.",
+      "Conducted customer interviews to identify expectations for an optimized fashion e-commerce website.",
+      "Tested website layout, user flow, and performance, then gave feedback to the tech team to improve usability and conversion.",
+      "Contributed to visual direction and key UX elements, including CTA placement, product display, checkout flow, QR payment, and custom design upload.",
+      "Analyzed website performance with 628 visitors, 2,443 page views, 3.89 pages per visit, and 21.5% checkout reach rate to propose UX and mobile optimization improvements.",
+    ],
+  },
+  {
+    period: "March 2024 — April 2024",
+    title: "External Relations Leader",
+    org: "ISB Academic Team",
+    link: "https://www.facebook.com/share/p/1AqLyZ3k7J/",
+    description: [
+      "Contacted 15 potential partners and speakers.",
+      "Worked with Talemy as the co-organizer partner.",
+      "Maintained a 96% task completion rate across the External Relations team before event day.",
+      "Coordinated 3 rounds of content alignment between speakers, partner, and internal teams.",
+      "Achieved 350+ registrations and attendees with support from partner communication and promotion channels.",
     ],
   },
 ];
@@ -92,11 +94,8 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-muted-foreground font-heading font-semibold text-sm tracking-widest uppercase mb-4 block">
-            Experience
-          </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Where I've been.
+            Experience
           </h2>
         </motion.div>
 
@@ -134,10 +133,10 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <span className="text-muted-foreground font-heading font-semibold text-sm tracking-widest uppercase mb-4 block">
-            Extracurricular Activities
+            Projects
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Beyond the classroom.
+            Extracurricular Activities
           </h2>
         </motion.div>
 
@@ -155,7 +154,21 @@ const Experience = () => {
               <span className="text-muted-foreground text-xs font-semibold tracking-widest uppercase block mb-1">
                 {act.period}
               </span>
-              <h3 className="font-heading text-lg font-bold text-foreground">{act.title}</h3>
+              <h3 className="font-heading text-lg font-bold text-foreground">
+                {act.link ? (
+                  <a
+                    href={act.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 hover:text-primary transition-colors"
+                  >
+                    {act.title}
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                ) : (
+                  act.title
+                )}
+              </h3>
               <span className="text-muted-foreground text-sm font-medium block mb-2">{act.org}</span>
               <ul className="list-disc list-outside pl-5 space-y-1">
                 {act.description.map((item, j) => (
