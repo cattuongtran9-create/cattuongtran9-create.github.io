@@ -268,7 +268,7 @@ const About = () => {
             </p>
             <ul className="list-disc list-outside pl-5 space-y-1 text-sm text-muted-foreground">
               <li>Bachelor degree at Marketing (2023 - 2027)</li>
-              <li>GPA: 3.39/4.0</li>
+              <li>GPA: 3.44/4.0</li>
             </ul>
           </motion.div>
 
