@@ -108,7 +108,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95] text-foreground"
           >
-            Welcome to <span className="bg-[hsl(348,89%,53%)] px-1.5 py-0.5 leading-none inline-block">Cat Tuong's</span> portfolio
+            <span className="bg-[hsl(348,89%,53%)] px-1.5 py-0.5 leading-none inline-block">Cat Tuong's</span> portfolio
           </motion.h1>
         </div>        
       </div>
